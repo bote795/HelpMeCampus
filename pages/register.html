@@ -2,12 +2,13 @@
 <head>
   <title></title>
     <script src="../js/jquery-2.0.2.js"></script>
-    <script src="../bootstrap/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap/bootstrap.min.css" media="screen" />
+    <script src="../bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css" media="screen" />
 </head>
 <body>
 	
-<div>
+<div class ="container">
+    <form method="post" action="">
         <div class="row text-center">
             <h2>New Registration</h2>
         </div>
@@ -16,10 +17,7 @@
                 First Name:
             </label>
             <div class="col-md-9">
-                <input type="text" class="form-control" id="firstname" placeholder="Enter First Name">
-            </div>
-            <div class="col-md-1">
-                <i class="fa fa-lock fa-2x"></i>
+                <input type="text" class="form-control" name="firstname" placeholder="Enter First Name">
             </div>
         </div>        
         <div>
@@ -27,10 +25,7 @@
                 Last Name:
             </label>
             <div class="col-md-9">
-                <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name">
-            </div>
-             <div class="col-md-1">
-                <i class="fa fa-lock fa-2x"></i>
+                <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name">
             </div>
         </div>
         <div>
@@ -38,13 +33,10 @@
                 Email address:
             </label>
             <div class="col-md-9">
-                <input type="email" class="form-control" id="emailaddress" placeholder="Enter email address">
+                <input type="email" class="form-control" name="emailaddress" placeholder="Enter email address">
                 <p class="help-block">
                     Example: yourname@domain.com
                 </p>
-            </div>
-             <div class="col-md-1">
-                <i class="fa fa-lock fa-2x"></i>
             </div>
         </div>
         <div>
@@ -52,7 +44,7 @@
                 Password:
             </label>
             <div class="col-md-9">
-                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                <input type="password" class="form-control" name="password" placeholder="Enter Password">
                 <p class="help-block">
                     Min: 6 characters (Alphanumeric only)
                 </p>
@@ -67,11 +59,11 @@
             </label>
             <div class="col-md-10">
                 <label class="radio">
-                    <input type="radio" name="sex" id="sex" value="male" checked>
+                    <input type="radio" name="sex" value="male" checked>
                     Male
                 </label>
                 <label class="radio">
-                    <input type="radio" name="sex" id="Radio1" value="female">
+                    <input type="radio" name="sex" value="female">
                     Female
                 </label>
             </div>             
@@ -81,7 +73,7 @@
                 Country:
             </label>
             <div class="col-md-9">
-                <select name="country" id="country" class="form-control">
+                <select name="country" class="form-control">
                     <option>--Please Select--</option>
                     <option>India</option>
                     <option>United States</option>
@@ -90,17 +82,6 @@
                     <option>Others</option>
                 </select>
             </div>            
-        </div>
-        <div>
-            <label for="uploadimage" class="col-md-2">
-                Upload Image:
-            </label>
-            <div class="col-md-10">
-                <input type="file" name="uploadimage" id="uploadimage">
-                <p class="help-block">
-                    Allowed formats: jpeg, jpg, gif, png
-                </p>
-            </div>          
         </div>
         <div>
             <div class="col-md-2">
@@ -114,14 +95,14 @@
             <div class="col-md-2">
             </div>
             <div class="col-md-10">
-                <button type="submit" class="btn btn-info">
+                <button type="submit" name="submit" class="btn btn-info">
                     Register
                 </button>
             </div>
         </div>
-    </div>  
-    </div>
-     <script src="../bootstrap/bootstrap.min.js"></script>
+    </form>
+</div>
+     <script src="../bootstrap.min.js"></script>
 </body>
 </html>
 
