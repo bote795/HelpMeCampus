@@ -2,13 +2,13 @@
 <head>
   <title></title>
     <script src="../js/jquery-2.0.2.js"></script>
-    <script src="../bootstrap.min.js"></script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css" media="screen" />
 </head>
 <body>
 	
 <div class ="container">
-    <form method="post" action="">
+  <form method="post" action="../php/insert.php">
         <div class="row text-center">
             <h2>New Registration</h2>
         </div>
@@ -33,7 +33,7 @@
                 Email address:
             </label>
             <div class="col-md-9">
-                <input type="email" class="form-control" name="emailaddress" placeholder="Enter email address">
+                <input type="email" class="form-control" name="email" placeholder="Enter email address">
                 <p class="help-block">
                     Example: yourname@domain.com
                 </p>
@@ -83,7 +83,55 @@
                 </select>
             </div>            
         </div>
-        <div>
+        <div><!-- major -->
+            <label for="major" class="col-md-2">
+                Major:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="major" placeholder="Enter major">
+            </div>
+        </div><!-- major -->
+        <div><!-- school -->
+            <label for="school" class="col-md-2">
+                University:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="school" placeholder="Enter University you attend">
+            </div>
+        </div><!-- school -->
+        <div><!-- grad yr -->
+            <label for="grad_yr" class="col-md-2">
+                Graduational Year:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="grad_yr" placeholder="Enter graduation year">
+            </div>
+        </div><!-- grad yr -->
+      <div><!-- app name -->
+            <label for="app_name" class="col-md-2">
+              Appartment Name:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="app_name" placeholder="Enter Appartment/Dorm Name">
+            </div>
+        </div><!-- app name -->
+        <div><!-- room  -->
+            <label for="room_num" class="col-md-2">
+              Room Num:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="room_num" placeholder="Enter Room Number">
+            </div>
+        </div><!-- room -->
+        <div><!-- floor  -->
+            <label for="floor" class="col-md-2">
+              Floor Num:
+            </label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" name="floor" placeholder="Enter Floor Number">
+            </div>
+        </div><!-- floor -->
+        <div>>
             <div class="col-md-2">
             </div>
             <div class="col-md-10">
@@ -102,7 +150,7 @@
         </div>
     </form>
 </div>
-     <script src="../bootstrap.min.js"></script>
+  <script src="../bootstrap/bootstrap.min.js"></script>
 </body>
 </html>
 

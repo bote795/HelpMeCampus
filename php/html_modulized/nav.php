@@ -1,4 +1,5 @@
-<?php 
+<html>
+<body>
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -23,4 +24,6 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-?>
+
+  </body>
+</html>
