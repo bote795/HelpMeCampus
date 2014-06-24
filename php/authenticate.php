@@ -2,6 +2,7 @@
 
 include 'connect.php';
 include 'PasswordHash.php';
+include 'functions.php';
 
 $text = array();
 $action = array();
@@ -33,6 +34,7 @@ $password =mysql_real_escape_string($_POST['password']);
           {
             echo "sucessful login";
             session_start();
+            session_cache_expire(15); //sets time limit on expire in 15mins
             $_SESSION['username'] = 'true';
           }
           else 
