@@ -1,9 +1,11 @@
 <?php
-
+ini_set('display_errors', 1);
+error_reporting(E_ALL ^ E_NOTICE);
+session_start();
 include 'connect.php';
 include 'PasswordHash.php';
 include 'functions.php';
-
+include 'entities/User.php';
 $text = array();
 $action = array();
 $action['result'] = null;
@@ -33,9 +35,21 @@ $password =mysql_real_escape_string($_POST['password']);
           if($validate == 1)
           {
             echo "sucessful login";
-            session_start();
+            
             session_cache_expire(15); //sets time limit on expire in 15mins
             $_SESSION['username'] = 'true';
+            
+         	$user = new User($row['id'],$username,$row['school'],$row['appartment_name']);
+			$stringUser = serialize(user);            
+            $date_of_expiry = time() + 1200 ;
+            setcookie( "user", $stringUser, $date_of_expiry );
+            
+            $host  = $_SERVER['HTTP_HOST'];
+            $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+            $extra = '../pages/user.php';
+            echo "http://$host$uri/$extra";
+            header("Location: http://$host$uri/$extra");
+            //die();
           }
           else 
           {
