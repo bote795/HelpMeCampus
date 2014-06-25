@@ -40,10 +40,10 @@ $password =mysql_real_escape_string($_POST['password']);
             $_SESSION['username'] = 'true';
             
          	$user = new User($row['id'],$username,$row['school'],$row['appartment_name']);
-			$stringUser = serialize(user);            
+			$stringUser = json_encode($user);            
             $date_of_expiry = time() + 1200 ;
-            setcookie( "user", $stringUser, $date_of_expiry );
-            
+            //setcookie( "user", $stringUser, $date_of_expiry );
+            $_SESSION['user'] = $stringUser;
             $host  = $_SERVER['HTTP_HOST'];
             $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
             $extra = '../pages/user.php';

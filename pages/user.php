@@ -5,13 +5,17 @@
     <script src="../bootstrap/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css" media="screen" />
   <?php 
-	session_start();
+		ini_set('display_errors', 1);
+error_reporting(E_ALL ^ E_NOTICE);
+		session_start();
 		include '../php/entities/User.php';
 		include '../php/check_login.php';
-		if(isset($_COOKIE['user']))
+		if(isset($_SESSION['user']))
         {
           	echo "its in cookie";
-			$objUser = unserialize($_COOKIE['user']);
+			$objUser = json_decode($_SESSION['user']);
+          var_dump($objUser);
+          //	echo "<br> this is it: $objUser" ;
         }
 		else
           echo "wow";
