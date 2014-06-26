@@ -41,7 +41,12 @@ function send_email($info){
       echo "Failures:";
       print_r($failures);
     }  
-    mail($info['email'] , "Welcome to HelpMeCampus", $message);
+	    // To send HTML mail, the Content-type header must be set
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	$headers .= 'From: Site Name <noreply@sitename.com>' . "\r\n";
+	$message = wordwrap($message, 70, "\r\n");
+    mail($info['email'] , "Welcome to HelpMeCampus", $message, $headers);
 	return $result;
 	
 }
