@@ -24,11 +24,7 @@ function send_email($info){
 	$body = format_email($info,'html');
 	$body_plain_txt = format_email($info,'txt');
 	//setup the mailer
-    //$transport = Swift_MailTransport::newInstance();
-    //$mailer = Swift_Mailer::newInstance($transport);
-    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 25)
-    ->setUsername('nbotell2@gmail.com')
-    ->setPassword('2Friends!');
+    $transport = Swift_MailTransport::newInstance();
     $mailer = Swift_Mailer::newInstance($transport);
 	$message = Swift_Message::newInstance();
 	$message ->setSubject('Welcome to HelpMeCampus');
@@ -45,6 +41,7 @@ function send_email($info){
       echo "Failures:";
       print_r($failures);
     }  
+    mail($info['email'] , "Welcome to HelpMeCampus", $message);
 	return $result;
 	
 }
