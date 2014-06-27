@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="./../index.php">HOME</a>
-          <a class="navbar-brand" href="#">Sign Out</a>
+          <a class="navbar-brand" href="./../php/signout.php">Sign Out</a>
         </div>
       </div>
     </div>

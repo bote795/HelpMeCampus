@@ -212,10 +212,6 @@
     	 e.preventDefault();
     	 $(this).tab('show');
     });
-    
-    $(function () {
-    $('#myTab a:last').tab('show');
-    })
     </script>
   <script src="../bootstrap/bootstrap.min.js"></script>
 </body>
