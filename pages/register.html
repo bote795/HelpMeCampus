@@ -2,13 +2,15 @@
 <head>
   <title></title>
     <script src="../js/jquery-2.0.2.js"></script>
+  	<script src="../js/jquery.validate.js"></script>
+  	<script src="../js/register_form_validate.js"></script>
     <script src="../bootstrap/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css" media="screen" />
 </head>
 <body>
 	
 <div class ="container">
-  <form method="post" action="../php/insert.php"> <!-- " -->
+  <form id="register" method="post" action="../php/insert.php"> <!-- " -->
         <div class="row text-center">
             <h2>New Registration</h2>
         </div>
@@ -54,7 +56,7 @@
             <div class="col-md-9">
                 <input type="password" class="form-control" name="password" placeholder="Enter Password">
                 <p class="help-block">
-                    Min: 6 characters (Alphanumeric only)
+                    Passwords are 8-16 characters with uppercase letters, lowercase letters and at least one number.
                 </p>
             </div>
              <div class="col-md-1">
@@ -139,7 +141,7 @@
                 <input type="text" class="form-control" name="floor" placeholder="Enter Floor Number">
             </div>
         </div><!-- floor -->
-        <div>>
+        <div>
             <div class="col-md-2">
             </div>
             <div class="col-md-10">

@@ -8,7 +8,16 @@
 </head>
 <body>
 	<div class="container">
-            <?php include 'php/html_modulized/nav.php'; ?>
+     
+       <?php  		
+		  session_start();
+          if(isset($_SESSION['username']))
+            {
+            	include 'php/html_modulized/user_nav.php'; 	
+            } 
+          else
+          	include 'php/html_modulized/nav.php';  
+      ?>
 
     <div class="mainContainer">
        <!-- Main jumbotron for a primary marketing message or call to action -->
