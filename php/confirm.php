@@ -33,7 +33,7 @@ if($action['result'] != 'error'){
 		$confirm_info = mysql_fetch_assoc($check_key);
 		
 		//confirm the email and update the users database
-		$update_users = mysql_query("UPDATE `users` SET `active` = 1 WHERE `id` = '$confirm_info[userid]' LIMIT 1") or die(mysql_error());
+		$update_users = mysql_query("UPDATE info SET `active` = 1 WHERE `id` = '$confirm_info[userid]' LIMIT 1") or die(mysql_error());
 		//delete the confirm row
 		$delete = mysql_query("DELETE FROM `confirm` WHERE `id` = '$confirm_info[id]' LIMIT 1") or die(mysql_error());
 		
@@ -41,6 +41,12 @@ if($action['result'] != 'error'){
 						
 			$action['result'] = 'success';
 			$action['text'] = 'User has been confirmed. Thank-You!';
+            $host  = $_SERVER['HTTP_HOST'];
+            $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+          	$extra = '../index.php';
+            echo "http://$host$uri/$extra";
+            header("Location: http://$host$uri/$extra");
+          	die();
 		
 		}else{
 
@@ -61,5 +67,4 @@ if($action['result'] != 'error'){
 
 ?>
 
-<?= 
-show_errors($action); ?>
+<?= show_errors($action); ?>

@@ -32,10 +32,9 @@ $password =mysql_real_escape_string($_POST['password']);
         {
           $row = mysql_fetch_array( $result );
           $validate = validate_password($password, $row['password']);      
-          if($validate == 1)
+          if($validate == 1 && $row['active'] == 1)
           {
             echo "sucessful login";
-            
             session_cache_expire(15); //sets time limit on expire in 15mins
             $_SESSION['username'] = 'true';
              $_SESSION['user'] = "";

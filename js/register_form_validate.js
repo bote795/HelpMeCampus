@@ -34,8 +34,8 @@
                      	numbers: true
                     },
                     password: {
-                        required: true,
-                     	password: true 
+                        required: true
+                     	//password: true 
                     },
                 }
              }); 
