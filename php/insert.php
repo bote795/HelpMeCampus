@@ -15,7 +15,6 @@ $username = mysql_real_escape_string($_POST["username"]);
 $password = $_POST['password'];
 $name = $fname ." , ". $lname;
 array_push($var,$password);
-$password = create_hash(mysql_real_escape_string($_POST['password']));
 $email = mysql_real_escape_string($_POST["email"]);
 $major  = mysql_real_escape_string($_POST["major"]);
 $school = mysql_real_escape_string($_POST["school"]);
@@ -25,7 +24,6 @@ $app_name = mysql_real_escape_string($_POST["app_name"]);
 $adress = "blah";
 $floor = mysql_real_escape_string($_POST["floor"]);
 $room_num = mysql_real_escape_string($_POST["room_num"]);
-
 //array for checking empty fields
 array_push($var,$fname);
 array_push($var,$lname);
@@ -39,6 +37,12 @@ array_push($var,$floor);
 array_push($var,$room_num);
 $action['var']= $var;
 $temp =CheckEmptyFields($action, $params);
+$pattern_pass= '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/';
+if(!preg_match($pattern_pass, $password, $matches, PREG_OFFSET_CAPTURE))
+{
+	$temp = 'Passwords are 8-16 characters with uppercase letters, lowercase letters and at least one number';
+}
+$password = create_hash(mysql_real_escape_string($_POST['password']));
 if($temp  == false)
 {
   // Insert a row of information into the table 
