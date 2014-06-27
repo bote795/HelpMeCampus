@@ -38,9 +38,9 @@ $password =mysql_real_escape_string($_POST['password']);
             
             session_cache_expire(15); //sets time limit on expire in 15mins
             $_SESSION['username'] = 'true';
-            
+             $_SESSION['user'] = "";
          	$user = new User($row['id'],$username,$row['school'],$row['appartment_name']);
-			$stringUser = json_encode($user);            
+            $stringUser = json_encode($user);            
             $date_of_expiry = time() + 1200 ;
             //setcookie( "user", $stringUser, $date_of_expiry );
             $_SESSION['user'] = $stringUser;
@@ -49,7 +49,7 @@ $password =mysql_real_escape_string($_POST['password']);
             $extra = '../pages/user.php';
             echo "http://$host$uri/$extra";
             header("Location: http://$host$uri/$extra");
-            //die();
+            die();
           }
           else 
           {

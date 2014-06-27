@@ -2,12 +2,10 @@
 class User 
 {    
 
-  private $id;
-  private $username;    
-  private $school;
-  private $app_name;
-  
-  
+  public $id;
+  public $username;    
+  public $school;
+  public $app_name;  
   function __construct($id, $username, $school, $app_name) {
       $this->id = $id;
       $this->username = $username;

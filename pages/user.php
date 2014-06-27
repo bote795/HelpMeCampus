@@ -6,43 +6,27 @@
     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css" media="screen" />
   <?php 
 		ini_set('display_errors', 1);
-error_reporting(E_ALL ^ E_NOTICE);
+		error_reporting(E_ALL ^ E_NOTICE);
 		session_start();
 		include '../php/entities/User.php';
 		include '../php/check_login.php';
 		if(isset($_SESSION['user']))
         {
-          	echo "its in cookie";
-			$objUser = json_decode($_SESSION['user']);
-          var_dump($objUser);
-          //	echo "<br> this is it: $objUser" ;
+			$objUser = json_decode($_SESSION['user'], true);
         }
-		else
-          echo "wow";
     ?>
 </head>
 <body>
 
 <div class="container">
-<ul class="nav nav-tabs" id="myTab">
-	<li class="active"><a href="#home">Home</a></li>
-	<li><a href="#profile">Profile</a></li>
-	<li><a href="#messages">Messages</a></li>
-	<li><a href="#settings">Settings</a></li>
-</ul>
- 
-<div class="tab-content">
-	<div class="tab-pane active" id="home">Home content...</div>
-	<div class="tab-pane" id="profile">Content here...</div>
-	<div class="tab-pane" id="messages">Messages...</div>
-	<div class="tab-pane" id="settings">Settings...</div>
-</div>
-</div>
-<hr>
+  <!-- NAV -->
+  <?php include '../php/html_modulized/user_nav.php'; ?>
+<!-- NAV -->
+  <hr>
 <div class="container">
 	<div class="row">
-  		<div class="col-sm-10"><h1><?php echo $objUser->getName(); ?></h1></div>
-    	<div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a></div>
+  		<div class="col-sm-10"><h1><?php echo $objUser['username']; ?></h1></div>
+    	<div class="col-sm-2"></div>
     </div>
     <div class="row">
   		<div class="col-sm-3"><!--left col-->
@@ -88,111 +72,7 @@ error_reporting(E_ALL ^ E_NOTICE);
           <div class="tab-content">
             <div class="tab-pane active" id="home">
               <div class="table-responsive">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Label 1</th>
-                      <th>Label 2</th>
-                      <th>Label 3</th>
-                      <th>Label </th>
-                      <th>Label </th>
-                      <th>Label </th>
-                    </tr>
-                  </thead>
-                  <tbody id="items">
-                    <tr>
-                      <td>1</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>6</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                     <tr>
-                      <td>8</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>9</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>10</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                      <td>Table cell</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <?php include'search.php'; ?>
                 <hr>
                 <div class="row">
                   <div class="col-md-4 col-md-offset-4 text-center">
