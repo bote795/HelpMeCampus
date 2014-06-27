@@ -19,29 +19,50 @@
                       <div class="form-group">
                           
                           <div class="col-xs-6">
-                              <label for="phone"><h4>Phone</h4></label>
-                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                              <label for="Email"><h4>Email</h4></label>
+                              <input type="email" class="form-control" name="Email" id="Email" placeholder="you@email.com" title="enter your Email if any.">
                           </div>
                       </div>
           
                       <div class="form-group">
                           <div class="col-xs-6">
-                             <label for="mobile"><h4>Mobile</h4></label>
-                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                             <label for="Major"><h4>Major</h4></label>
+                              <input type="text" class="form-control" name="major" id="major" placeholder="enter major" title="enter your major if any.">
                           </div>
                       </div>
                       <div class="form-group">
                           
                           <div class="col-xs-6">
-                              <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                              <label for="School"><h4>School</h4></label>
+                              <input type="text" class="form-control" name="school" id="school" placeholder="enter school" title="enter your school.">
                           </div>
                       </div>
                       <div class="form-group">
                           
                           <div class="col-xs-6">
-                              <label for="email"><h4>Location</h4></label>
-                              <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                              <label for="grad_yr"><h4>Graduation Year</h4></label>
+                              <input type="text" class="form-control" id="grad_yr" placeholder="graduation year" title="enter a graduation year">
+                          </div>
+                      </div>
+           				<div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="app_name"><h4>Appartment Name/Dorm Name</h4></label>
+                              <input type="text" class="form-control" name="app_name" id="app_name" placeholder="enter Appartment Name/Dorm Name" title="enter yourAppartment Name/Dorm Name.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="floor"><h4>Floor</h4></label>
+                              <input type="text" class="form-control" id="floor" placeholder="floor number" title="enter a floor numberr">
+                          </div>
+                      </div>
+           			 <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="room_num"><h4>Room Number</h4></label>
+                              <input type="text" class="form-control" id="room_num" placeholder="Room number" title="enter a Room number">
                           </div>
                       </div>
                       <div class="form-group">
@@ -54,7 +75,7 @@
                       <div class="form-group">
                           
                           <div class="col-xs-6">
-                            <label for="password2"><h4>Verify</h4></label>
+                            <label for="password2"><h4>Verify Password</h4></label>
                               <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
                           </div>
                       </div>
