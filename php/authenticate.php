@@ -35,9 +35,8 @@ $password =mysql_real_escape_string($_POST['password']);
           if($validate == 1 && $row['active'] == 1)
           {
             echo "sucessful login";
-            session_cache_expire(15); //sets time limit on expire in 15mins
             $_SESSION['username'] = 'true';
-             $_SESSION['user'] = "";
+            $_SESSION['user'] = "";
          	$user = new User($row['id'],$username,$row['school'],$row['appartment_name']);
             $stringUser = json_encode($user);            
             $date_of_expiry = time() + 1200 ;
