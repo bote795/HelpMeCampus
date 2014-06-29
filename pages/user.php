@@ -77,10 +77,8 @@
                   	<ul class="pagination" id="myPager"></ul>
                   </div>
                 </div>
-              </div><!--/table-resp-->
-              
-              <hr>
-              
+              </div><!--/table-resp-->  
+		     <hr>
               <h4>Recent Activity</h4>
               
               <div class="table-responsive">
