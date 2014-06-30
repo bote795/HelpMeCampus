@@ -1,0 +1,17 @@
+.filters {
+  margin-bottom: 20px; }
+
+.filter-container {
+  float: left;
+  width: 20%;
+  padding-right: 10px; }
+.filter-container:last-of-type {
+  padding-right: 0; }
+.filter-container input {
+  -webkit-appearance: none;
+  background: #c8c8c8;
+  border-radius: 3px;
+  font-size: 18px;
+  width: 100%; }
+.filter-container input:focus {
+  outline: none; }

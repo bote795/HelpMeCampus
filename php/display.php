@@ -24,9 +24,6 @@ while($row = mysql_fetch_array( $result )) {
   	echo "<td>"; 
 	echo $row['floor'];
 	echo "</td>";
-  	echo "<td>"; 
-	echo $row['appartment_name'];
-	echo "</td></tr>";
-  
+	echo "</tr>";  
 } 
 ?>
