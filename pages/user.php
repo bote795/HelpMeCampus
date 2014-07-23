@@ -5,6 +5,7 @@
     <script src="../bootstrap/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css" media="screen" />
   <?php 
+		
 		session_start();
 		include '../php/entities/User.php';
 		include '../php/check_login.php';
@@ -12,6 +13,7 @@
         {
 			$objUser = json_decode($_SESSION['user'], true);
         }
+		
     ?>
 </head>
 <body>
@@ -31,39 +33,22 @@
               
           <ul class="list-group">
             <li class="list-group-item text-muted">Profile</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span> 2.13.2014</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span> <?php echo $objUser['joined']; ?></li>
             <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> Yesterday</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> Joseph Doe</li>
-            
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> <?php echo $objUser['name']; ?></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Major</strong></span> <?php echo $objUser['major']; ?></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Appartment/Dorm</strong></span> <?php echo $objUser['app_name']; ?></li>          
           </ul> 
                
           <div class="panel panel-default">
-            <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
-            <div class="panel-body"><a href="http://bootply.com">bootply.com</a></div>
-          </div>
-          
-          
-          <ul class="list-group">
-            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
-          </ul> 
-               
-          <div class="panel panel-default">
-            <div class="panel-heading">Social Media</div>
-            <div class="panel-body">
-            	<i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
-            </div>
-          </div>
-          
+            <div class="panel-heading">School <i class="fa fa-link fa-1x"></i></div>
+            <div class="panel-body"><?php echo $objUser['school']; ?></div>
+          </div>        
         </div><!--/col-3-->
     	<div class="col-sm-9">
           
           <ul class="nav nav-tabs" id="myTab">
             <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-            <li><a href="#messages" data-toggle="tab">Messages</a></li>
             <li><a href="#settings" data-toggle="tab">Settings</a></li>
           </ul>
               
@@ -80,53 +65,6 @@
               </div><!--/table-resp-->
               
               <hr>
-              
-              <h4>Recent Activity</h4>
-              
-              <div class="table-responsive">
-                <table class="table table-hover">
-                  
-                  <tbody>
-                    <tr>
-                      <td><i class="pull-right fa fa-edit"></i> Today, 1:00 - Jeff Manzi liked your post.</td>
-                    </tr>
-                    <tr>
-                      <td><i class="pull-right fa fa-edit"></i> Today, 12:23 - Mark Friendo liked and shared your post.</td>
-                    </tr>
-                    <tr>
-                      <td><i class="pull-right fa fa-edit"></i> Today, 12:20 - You posted a new blog entry title "Why social media is".</td>
-                    </tr>
-                    <tr>
-                      <td><i class="pull-right fa fa-edit"></i> Yesterday - Karen P. liked your post.</td>
-                    </tr>
-                    <tr>
-                      <td><i class="pull-right fa fa-edit"></i> 2 Days Ago - Philip W. liked your post.</td>
-                    </tr>
-                    <tr>
-                      <td><i class="pull-right fa fa-edit"></i> 2 Days Ago - Jeff Manzi liked your post.</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-             </div><!--/tab-pane-->
-             <div class="tab-pane" id="messages">
-               
-               <h2></h2>
-               
-               <ul class="list-group">
-                  <li class="list-group-item text-muted">Inbox</li>
-                  <li class="list-group-item text-right"><a href="#" class="pull-left">Here is your a link to the latest summary report from the..</a> 2.13.2014</li>
-                  <li class="list-group-item text-right"><a href="#" class="pull-left">Hi Joe, There has been a request on your account since that was..</a> 2.11.2014</li>
-                  <li class="list-group-item text-right"><a href="#" class="pull-left">Nullam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  <li class="list-group-item text-right"><a href="#" class="pull-left">Thllam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  <li class="list-group-item text-right"><a href="#" class="pull-left">Wesm sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  <li class="list-group-item text-right"><a href="#" class="pull-left">For therepien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  <li class="list-group-item text-right"><a href="#" class="pull-left">Also we, havesapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  <li class="list-group-item text-right"><a href="#" class="pull-left">Swedish chef is assaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  
-                </ul> 
-               
              </div><!--/tab-pane-->
              <div class="tab-pane" id="settings">
 					<?php include '../php/html_modulized/settings_form.php'; ?>               	

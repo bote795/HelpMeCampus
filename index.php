@@ -22,8 +22,11 @@
     <div class="mainContainer">
        <!-- Main jumbotron for a primary marketing message or call to action -->
        <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <h1>HelpMeCampus!</h1>
+        <p>Need help in your homework?  Join HelpMeCampus right now!
+          <br>Find a student that specializes in that major nearby!
+           Or just find someone to hang out with you!
+        </p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
       </div>
 
@@ -31,13 +34,13 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <h2>Need Help?</h2>
+          <p>Join now and get acess to our database of students nearby in your appartment/Dorm. Search by the subject in the homework you need help with.  </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <h2>Bored?</h2>
+          <p>Find someone with your same major nearby and hang out! Might meet your new bestfriend that shares all your same interests! </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">

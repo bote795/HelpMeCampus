@@ -37,7 +37,7 @@ $password =mysql_real_escape_string($_POST['password']);
             echo "sucessful login";
             $_SESSION['username'] = 'true';
             $_SESSION['user'] = "";
-         	$user = new User($row['id'],$username,$row['school'],$row['appartment_name']);
+         	$user = new User($row['id'],$username,$row['school'],$row['appartment_name'], $row['name'], $row['major'], $row['joined']);
             $stringUser = json_encode($user);            
             $date_of_expiry = time() + 1200 ;
             //setcookie( "user", $stringUser, $date_of_expiry );

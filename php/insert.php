@@ -24,6 +24,7 @@ $app_name = mysql_real_escape_string($_POST["app_name"]);
 $adress = "blah";
 $floor = mysql_real_escape_string($_POST["floor"]);
 $room_num = mysql_real_escape_string($_POST["room_num"]);
+$joined =date("Y-m-d");
 //array for checking empty fields
 array_push($var,$fname);
 array_push($var,$lname);
@@ -46,8 +47,8 @@ $password = create_hash(mysql_real_escape_string($_POST['password']));
 if($temp  == false)
 {
   // Insert a row of information into the table 
-  $result = mysql_query("INSERT INTO info (username, name, password, email, major, school, grad_yr, appartment_name, floor, room_num) VALUES 
-  ('$username', '$name', '$password' ,'$email' , '$major', '$school' ,  '$grad_yr' , '$app_name' , '$floor' , '$room_num' ) ") 
+  $result = mysql_query("INSERT INTO info (username, name, password, email, major, school, grad_yr, appartment_name, floor, room_num, joined) VALUES 
+  ('$username', '$name', '$password' ,'$email' , '$major', '$school' ,  '$grad_yr' , '$app_name' , '$floor' , '$room_num' $joined) ") 
   or die(mysql_error()); 
   if($result)
   {
